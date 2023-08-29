@@ -1,3 +1,5 @@
+@import './index.scss';
+
 $header-height: 60px;
 $sidebar-width: 300px;
 
@@ -12,7 +14,6 @@ $sidebar-width: 300px;
     // grid-column-end: -1;
     grid-row: 1/2;
     grid-column: 1/-1;
-    background-color: red;
   }
 
   &__sidebar {
@@ -22,7 +23,6 @@ $sidebar-width: 300px;
     // grid-column-start: 2;
     grid-row: 2/-1;
     grid-column: 1/2;
-    background-color: tan;
   }
   &___content {
     // grid-row-start: 2;
@@ -31,6 +31,31 @@ $sidebar-width: 300px;
     // grid-column-start: -1;
     grid-row: 2/-1;
     grid-column: 2/-1;
-    background-color: gainsboro;
+  }
+}
+
+//Styling Header
+
+.header {
+  background-color: $primary;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  height: $header-height &__logo;
+  padding: 5px 20px;
+  &__logo {
+    display: flex;
+    font-size: 2.4rem;
+    color: $white;
+  }
+  &__text {
+    flex: 1;
+    color: $white;
+  }
+  &__search {
+    min-width: 300px;
+  }
+  &__search > input {
+    border: none;
   }
 }
